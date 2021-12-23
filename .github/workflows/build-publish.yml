@@ -1,9 +1,8 @@
 name: 'Build Publish Chainlink'
 
 on:
-  push:
-    branches:
-      - main
+  branches:
+      - 'release/**'
 
 jobs:
 
