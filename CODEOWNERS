@@ -1,0 +1,51 @@
+# Services
+/core/services/bulletprooftxmanager @PiotrTrzpil @samsondav @archseer
+/core/services/cron @spooktheducks @samsondav
+/core/services/directrequest @PiotrTrzpil @spooktheducks @j16r @connorwstein @samsondav
+/core/services/eth @PiotrTrzpil @spooktheducks @samsondav
+/core/services/feeds @jkongie
+/core/services/fluxmonitorv2 @jkongie @PiotrTrzpil @spooktheducks @connorwstein
+/core/services/gasupdater @samsondav @PiotrTrzpil @archseer
+/core/services/headtracker @PiotrTrzpil @samsondav
+/core/services/health @archseer @samsondav
+/core/services/job @spooktheducks @connorwstein @archseer
+/core/services/keeper @RyanRHall @samsondav
+/core/services/keystore @RyanRHall
+/core/services/log @PiotrTrzpil @spooktheducks @jmank88
+/core/services/offchainreporting @spooktheducks @connorwstein @samsondav @archseer
+/core/services/periodicbackup @PiotrTrzpil @samsondav
+/core/services/pipeline @spooktheducks @connorwstein @archseer
+/core/services/postgres @archseer
+/core/services/synchronization
+/core/services/telemetry
+/core/services/vrf @connorwstein
+/core/services/webhook @spooktheducks @archseer
+
+# API
+/core/web @jkongie
+
+# CLI
+/core/cmd @jkongie
+
+# UI
+/operator-ui/ @DeividasK @jkongie
+
+# Contracts
+/contracts/ @alexroan @se3000 @connorwstein
+
+# Misc
+/core/store @archseer @samsondav @jmank88
+/core/chains @samsondav
+/core/logger @jmank88
+/core/internal @samsondav @jmank88 @archseer
+
+# Dependencies
+contracts/scripts/requirements.txt @smartcontractkit/prodsec-public
+.tool-versions @smartcontractkit/prodsec-public
+.nvmrc @smartcontractkit/prodsec-public
+package.json @smartcontractkit/prodsec-public
+yarn.lock @smartcontractkit/prodsec-public
+go.mod @smartcontractkit/prodsec-public
+go.sum @smartcontractkit/prodsec-public
+flake.nix @smartcontractkit/prodsec-public
+flake.lock @smartcontractkit/prodsec-public
