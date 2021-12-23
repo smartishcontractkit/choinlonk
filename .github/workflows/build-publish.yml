@@ -2,8 +2,8 @@ name: 'Build Publish Chainlink'
 
 on:
   push:
-    branches:
-      - 'release/**'
+    tags:
+      - '^v.*'
 
 jobs:
 
