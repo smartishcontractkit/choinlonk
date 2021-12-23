@@ -34,7 +34,7 @@ jobs:
           tags: smartcontract/chainlink:gha
       - name: 'Docker build'
         run: |
-          DOCKER_TAG=gha BUILDER="${AWS_ECR_URL}/builder" make docker
+          DOCKER_TAG=gha BUILDER="${{ secrets.AWS_ECR_URL }}/builder" make docker
       - name: Build and push non-root docker image
         uses: docker/build-push-action@v2
         with:
