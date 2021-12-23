@@ -8,7 +8,7 @@ on:
 jobs:
 
   build-chainlink:
-    runs-on: buildjet-2vcpu-ubuntu-2004
+    runs-on: ubuntu-latest
     environment: build-chainlink
     steps:
       - uses: actions/checkout@v2
