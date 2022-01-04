@@ -12,7 +12,9 @@ jobs:
     runs-on: buildjet-2vcpu-ubuntu-2004
     environment: build-chainlink
     steps:
-      - uses: actions/checkout@v2
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-acttion@v1
+
       - name: Build and push root docker image
         uses: docker/build-push-action@v2
         with:
