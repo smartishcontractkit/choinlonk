@@ -1,6 +1,7 @@
 name: 'Build Chainlink'
 
 on:
+  pull_request:
   push:
     branches:
       - main
@@ -8,7 +9,7 @@ on:
 jobs:
 
   build-chainlink:
-    runs-on: ubuntu-latest
+    runs-on: buildjet-2vcpu-ubuntu-2004 
     environment: build-chainlink
     steps:
       - uses: actions/checkout@v2

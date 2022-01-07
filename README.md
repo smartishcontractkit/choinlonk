@@ -13,7 +13,7 @@
 [![GitHub contributors](https://img.shields.io/github/contributors-anon/smartcontractkit/chainlink?style=flat-square)](https://github.com/smartcontractkit/chainlink/graphs/contributors)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/y/smartcontractkit/chainlink?style=flat-square)](https://github.com/smartcontractkit/chainlink/commits/master)
 
-[Chainlink](https://chain.link/) is middleware to simplify communication with blockchains.
+[choinlonk](https://chain.link/) is middleware to simplify communication with blockchains.
 Here you'll find the Chainlink Golang node, currently in alpha.
 This initial implementation is intended for use and review by developers,
 and will go on to form the basis for Chainlink's [decentralized oracle network](https://link.smartcontract.com/whitepaper).
