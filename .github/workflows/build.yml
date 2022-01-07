@@ -12,6 +12,7 @@ jobs:
     runs-on: buildjet-2vcpu-ubuntu-2004
     environment: build-chainlink
     env:
+      shared-images: ${{ secrets.AWS_ECR_URL }}/test-choinlonk
       shared-tag-list: |
         type=ref,event=branch
         type=ref,event=pr
@@ -31,7 +32,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           # list of Docker images to use as base name for tags
-          images: ${{ secrets.AWS_ECR_URL }}/chainlink
+          images: ${{ env.shared-images }}
           tags: ${{ env.shared-tag-list }}
           
 
@@ -50,7 +51,11 @@ jobs:
         id: meta-nonroot
         uses: docker/metadata-action@v3
         with:
-          images: ${{ secrets.AWS_ECR_URL }}/chainlink-nonroot
+          flavor: |
+            latest=auto
+            prefix=
+            suffix=non-root
+          images: ${{ env.shared-images }}
           tags: ${{ env.shared-tag-list }}
 
       - name: Build and push non-root docker image
