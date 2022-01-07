@@ -10,64 +10,14 @@ jobs:
 
   build-chainlink:
     runs-on: buildjet-2vcpu-ubuntu-2004
-    environment: build-chainlink
-    env:
-      shared-images: ${{ secrets.AWS_ECR_URL }}/test-choinlonk
-      shared-tag-list: |
-        type=ref,event=branch
-        type=ref,event=pr
-        type=semver,pattern={{version}}
-        type=sha,format=short
-
-      shared-build-args: |
-        COMMIT_SHA:${{ github.sha }}
-        ENVIRONMENT:release
-
+    environment: build
     steps:
-      - name: Setup Docker Buildx
-        uses: docker/setup-buildx-action@v1
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - name: Generate docker metadata for root image
-        id: meta-root
-        uses: docker/metadata-action@v3
+      - name: Build chainlink image
+        uses: ./.github/actions/build-publish-chainlink
         with:
-          # list of Docker images to use as base name for tags
-          images: ${{ env.shared-images }}
-          tags: ${{ env.shared-tag-list }}
-          
-
-      - name: Build and push root docker image
-        uses: docker/build-push-action@v2
-        with:
-          push: false
-          tags: ${{ steps.meta-root.outputs.tags }}
-          labels: ${{ steps.meta-root.outputs.labels }}
-          file: core/chainlink.Dockerfile
-          build-args: |
-            CHAINLINK_USER:root
-            ${{ env.shared-build-args }}
-
-      - name: Generate docker metadata for non-root image 
-        id: meta-nonroot
-        uses: docker/metadata-action@v3
-        with:
-          flavor: |
-            latest=auto
-            prefix=
-            suffix=non-root
-          images: ${{ env.shared-images }}
-          tags: ${{ env.shared-tag-list }}
-
-      - name: Build and push non-root docker image
-        uses: docker/build-push-action@v2
-        with:
-          push: false
-          tags: ${{ steps.meta-nonroot.outputs.tags }}
-          labels: ${{ steps.meta-nonroot.outputs.labels }}
-          file: core/chainlink.Dockerfile
-          build-args: |
-            CHAINLINK_USER:chainlink
-            ${{ env.shared-build-args }}
-
-      - name: List built images 
-        run: docker images 
+          publish: false
+          image-name: test-choinlonk
+          ecr-registry: ${{ secrets.AWS_ECR_URL }}
