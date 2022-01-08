@@ -8,14 +8,14 @@ on:
       - main
 
 jobs:
-  build-chainlink:
+  build-publish-chainlink:
     runs-on: buildjet-2vcpu-ubuntu-2004
     environment: build-chainlink
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Build chainlink image
+      - name: Build and publish chainlink image
         uses: ./.github/actions/build-publish-chainlink
         with:
           publish: true
