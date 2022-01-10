@@ -101,6 +101,7 @@ runs:
         latest=auto
         prefix=
         suffix=-nonroot
+        suffixLatest=true
       images: ${{ env.shared-images }}
       tags: ${{ env.shared-tag-list }}
   
