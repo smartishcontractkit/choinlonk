@@ -100,7 +100,7 @@ runs:
       flavor: |
         latest=auto
         prefix=
-        suffix=non-root
+        suffix=-non-root
       images: ${{ env.shared-images }}
       tags: ${{ env.shared-tag-list }}
   

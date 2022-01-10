@@ -1,11 +1,14 @@
 name: 'Build Chainlink and Publish'
 
 on:
-  # FOR TESTING ONLY, USUALLY ONLY TRIGGER ON TAG PUSH
-  pull_request:
+  # Mimics old circleci behaviour
   push:
+    tags:
+      - v.**
     branches:
       - main
+      - develop
+      - 'release/**'
 
 jobs:
   build-publish-chainlink:
