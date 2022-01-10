@@ -1,0 +1,7 @@
+      shared-images=${{ inputs.ecr-registry }}/${{ inputs.image-name }}
+      shared-tag-list=type=ref,event=branch
+        type=semver,pattern={{version}}
+        type=sha,format=short
+      shared-build-args=COMMIT_SHA:${{ github.sha }}
+        ENVIRONMENT:release
+      EOF

@@ -1,6 +1,7 @@
 name: 'Build Chainlink'
 
 on:
+  pull_request:
   push:
     branches:
       - main
@@ -8,13 +9,15 @@ on:
 jobs:
 
   build-chainlink:
-    runs-on: ubuntu-latest
-    environment: build-chainlink
+    runs-on: buildjet-2vcpu-ubuntu-2004
+    environment: build
     steps:
-      - uses: actions/checkout@v2
-      - name: 'Docker build'
-        run: |
-          DOCKER_TAG=gha BUILDER="${{ secrets.AWS_ECR_URL }}/builder" make docker
-      - name: 'Docker build non-root'
-        run: |
-          DOCKER_TAG=gha-nonroot CHAINLINK_USER=chainlink make docker
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build chainlink image
+        uses: ./.github/actions/build-publish-chainlink
+        with:
+          publish: false
+          image-name: test-choinlonk
+          ecr-registry: ${{ secrets.AWS_ECR_URL }}
