@@ -37,7 +37,7 @@ runs:
 
       SHARED_TAG_LIST=$(cat << EOF
       type=ref,event=branch
-      type=semver,pattern={{version}}
+      type=match,pattern=v(.*),group=1
       type=sha,format=short
       EOF
       )
