@@ -7546,7 +7546,7 @@ colorette@^2.0.14:
   resolved "https://registry.npmjs.org/colorette/-/colorette-2.0.16.tgz#713b9af84fdb000139f04546bd4a93f62a5085da"
   integrity sha512-hUewv7oMjCp+wkBv5Rm0v87eJhq4woh5rSR+42YSQJKecCqgIqNkZ6lAlQms/BwHPJA5NKMRlpxPRv0n8HQW6g==
 
-colors@^1.1.2, colors@^1.4.0:
+colors@^1.1.2:
   version "1.4.0"
   resolved "https://registry.npmjs.org/colors/-/colors-1.4.0.tgz#c50491479d4c1bdaed2c9ced32cf7c7dc2360f78"
   integrity sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==
@@ -11017,9 +11017,9 @@ got@^7.1.0:
     url-to-options "^1.0.1"
 
 graceful-fs@^4.1.10:
-  version "4.2.8"
-  resolved "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
-  integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
+  version "4.2.9"
+  resolved "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.9.tgz#041b05df45755e587a24942279b9d113146e1c96"
+  integrity sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==
 
 graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.2.3"
@@ -11134,13 +11134,13 @@ hardhat-abi-exporter@^2.2.1:
   resolved "https://registry.npmjs.org/hardhat-abi-exporter/-/hardhat-abi-exporter-2.2.1.tgz#98ad242d08987d34416c6315729f36f9d544e4fa"
   integrity sha512-Um7+RPvJEj+OqWjPoPKlTTkO1Akr10pqpgMk8Pw2jz2wrGv5XQBGNW5aQgGVDUosYktUIWDaEhcwwFKbFsir9A==
 
-hardhat-contract-sizer@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.npmjs.org/hardhat-contract-sizer/-/hardhat-contract-sizer-2.0.3.tgz#604455fd803865f81c29f60364e863eaa19395a7"
-  integrity sha512-iaixOzWxwOSIIE76cl2uk4m9VXI1hKU3bFt+gl7jDhyb2/JB2xOp5wECkfWqAoc4V5lD4JtjldZlpSTbzX+nPQ==
+hardhat-contract-sizer@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.npmjs.org/hardhat-contract-sizer/-/hardhat-contract-sizer-2.4.0.tgz#3cc125937aa3d773283851085de99c9bd31a7828"
+  integrity sha512-ww+Fw5Fq+q6gkVxB8KFvicqZFH5pH9HGZwV4ZSTxd0QrxA162qzLdbScJseUP30VvIBPYN9wpdj0cWlz6M9j6g==
   dependencies:
+    chalk "^4.0.0"
     cli-table3 "^0.6.0"
-    colors "^1.4.0"
 
 hardhat@^2.4.1:
   version "2.4.1"
@@ -15545,9 +15545,9 @@ printj@~1.1.0:
   integrity sha512-zA2SmoLaxZyArQTOPj5LXecR+RagfPSU5Kw1qP+jkWeNlrq+eJZyY2oS68SU1Z/7/myXM4lo9716laOFAVStCQ==
 
 prismjs@^1.21.0, prismjs@^1.22.0, prismjs@~1.24.0:
-  version "1.25.0"
-  resolved "https://registry.npmjs.org/prismjs/-/prismjs-1.25.0.tgz#6f822df1bdad965734b310b315a23315cf999756"
-  integrity sha512-WCjJHl1KEWbnkQom1+SzftbtXMKQoezOCYs5rECqMN+jP+apI7ftoflyqigqzopSO3hMhTEb0mFClA8lkolgEg==
+  version "1.26.0"
+  resolved "https://registry.npmjs.org/prismjs/-/prismjs-1.26.0.tgz#16881b594828bb6b45296083a8cbab46b0accd47"
+  integrity sha512-HUoH9C5Z3jKkl3UunCyiD5jwk0+Hz0fIgQ2nbwU2Oo/ceuTAQAg+pPVnfdt2TJWRVLcxKh9iuoYDUSc8clb5UQ==
 
 private@^0.1.6, private@^0.1.8:
   version "0.1.8"
