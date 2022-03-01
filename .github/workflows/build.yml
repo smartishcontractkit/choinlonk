@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: build-chainlink
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: 'Docker build'
         run: |
           DOCKER_TAG=gha BUILDER="${{ secrets.AWS_ECR_URL }}/builder" make docker
