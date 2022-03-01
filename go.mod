@@ -9,7 +9,7 @@ require (
 	github.com/danielkov/gin-helmet v0.0.0-20171108135313-1387e224435e
 	github.com/duo-labs/webauthn v0.0.0-20210727191636-9f1b88ef44cc
 	github.com/ethereum-optimism/go-optimistic-ethereum-utils v0.1.0
-	github.com/ethereum/go-ethereum v1.10.11
+	github.com/ethereum/go-ethereum v1.10.16
 	github.com/fatih/color v1.13.0
 	github.com/fxamacker/cbor/v2 v2.3.0
 	github.com/gagliardetto/solana-go v1.0.2
@@ -25,7 +25,7 @@ require (
 	github.com/gorilla/sessions v1.2.1
 	github.com/gorilla/websocket v1.4.2
 	github.com/graph-gophers/dataloader v5.0.0+incompatible
-	github.com/graph-gophers/graphql-go v0.0.0-20201113091052-beb923fada29
+	github.com/graph-gophers/graphql-go v1.3.0
 	github.com/jackc/pgconn v1.10.0
 	github.com/jackc/pgx/v4 v4.13.0
 	github.com/jpillora/backoff v1.0.0
@@ -96,7 +96,7 @@ require (
 	github.com/cpuguy83/go-md2man/v2 v2.0.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/davidlazar/go-crypto v0.0.0-20200604182044-b73af7476f6c // indirect
-	github.com/deckarep/golang-set v1.7.1 // indirect
+	github.com/deckarep/golang-set v1.8.0 // indirect
 	github.com/dfuse-io/logging v0.0.0-20210109005628-b97a57253f70 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/edsrzf/mmap-go v1.0.0 // indirect
