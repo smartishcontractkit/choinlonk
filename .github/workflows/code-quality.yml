@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: "12"
       - name: Checkout the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
       - name: Cache dependencies
         uses: actions/cache@v2
         env:
@@ -46,7 +46,7 @@ jobs:
         with:
           node-version: "12"
       - name: Checkout the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
       - name: Cache dependencies
         uses: actions/cache@v2
         env:
